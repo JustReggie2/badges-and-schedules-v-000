@@ -12,10 +12,10 @@ end
 
 def assign_rooms(attendees)
   room_list = []
-  room = 1
-  attendees.each do |speaker|
-    room_list << "Hello, #{speaker}! You'll be assigned to room #{room}!"
-    room += 1
+  #room = 1
+  attendees.each.with_index(1) do |speaker, index|
+    room_list << "Hello, #{speaker}! You'll be assigned to room #{index}!"
+    #room += 1
   end
   room_list
 end
